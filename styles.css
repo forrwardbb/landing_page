@@ -35,13 +35,14 @@ img {
     border-radius: 12px;
 }
 
+/* Hero banner tuned to take less vertical space */
 .hero {
     position: relative;
-    min-height: 85vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 1.5rem;
+    padding: 4rem 1.5rem;
     text-align: center;
     color: #fff;
     background: url('IMG-20251003-WA0031.jpg') center/cover no-repeat;
@@ -481,7 +482,8 @@ img {
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 75vh;
+        min-height: 55vh;
+        padding: 3rem 1.25rem;
     }
 
     .program-card {
