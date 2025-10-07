@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary: #ff7a38;
     --primary-dark: #d85e1d;
     --dark: #173452;
@@ -44,7 +44,7 @@ img {
     padding: 6rem 1.5rem;
     text-align: center;
     color: #fff;
-    background: url('IMG-20251003-WA0029.jpg') center/cover no-repeat;
+    background: url('IMG-20251003-WA0031.jpg') center/cover no-repeat;
 }
 
 .hero__overlay {
@@ -92,6 +92,21 @@ img {
     font-weight: 600;
     color: #ffe6d7;
     letter-spacing: 0.05em;
+}
+
+.hero__price-highlight {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    background: rgba(255, 122, 56, 0.92);
+    color: #ffffff;
+    border-radius: 999px;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    box-shadow: 0 16px 36px rgba(23, 52, 82, 0.28);
+    font-size: clamp(1.35rem, 3.8vw, 2.35rem);
+    border: 3px solid rgba(255, 255, 255, 0.45);
 }
 
 .btn {
@@ -292,11 +307,21 @@ img {
     padding-right: 1.2rem;
 }
 
+
+
 .extras__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 1rem;
 }
+
+.extras__gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
 
 .section--cta {
     background: var(--dark);
@@ -318,14 +343,82 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.contact__info ul {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 0;
+.contact__info {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 2.75rem;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 22px 48px rgba(23, 52, 82, 0.12);
+    text-align: center;
 }
 
-.contact__info li {
-    margin-bottom: 0.8rem;
+.contact__info h2 {
+    margin-bottom: 0.75rem;
+}
+
+.contact__info p {
+    margin: 0;
+    color: #3b4a60;
+}
+
+.contact__cards {
+    display: grid;
+    gap: 1.4rem;
+    margin-top: 2.2rem;
+}
+
+@media (min-width: 620px) {
+    .contact__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.contact-card {
+    background: linear-gradient(135deg, rgba(23, 52, 82, 0.08), rgba(255, 122, 56, 0.08));
+    border-radius: 22px;
+    padding: 1.6rem 1.4rem;
+    border: 1px solid rgba(23, 52, 82, 0.12);
+    box-shadow: 0 16px 32px rgba(23, 52, 82, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 42px rgba(23, 52, 82, 0.16);
+}
+
+.contact-card__label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+}
+
+.contact-card__phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: #fff;
+    border: 2px solid rgba(255, 122, 56, 0.25);
+    direction: ltr;
+    letter-spacing: 0.04em;
+}
+
+.contact-card__phone:hover {
+    border-color: rgba(255, 122, 56, 0.6);
+    box-shadow: 0 12px 24px rgba(255, 122, 56, 0.25);
+}
+
+.contact-card__note {
+    display: block;
+    margin-top: 0.65rem;
+    color: #4f6078;
+    font-size: 0.95rem;
 }
 
 .contact__form {
